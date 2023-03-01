@@ -1,53 +1,48 @@
-#bookshelf {
-    position: absolute;
-    width : 280px;
-    height: 200px;
-    background-color: brown;
+body{
+    padding-left: 0px;
+    margin: auto;
 }
 
-#book1{
+#container{
     position: absolute;
-    width : 40px;
-    height: 200px;
-    margin-left: 10px;
     background-color: lightblue;
+    width: 100vw;
+    height: 5000px;
+    overflow: hidden;
 }
 
-#book2{
+#soil{
     position: absolute;
-    width : 40px;
-    height: 200px;
-    margin-left: 40px;
-    background-color: red;
+    background-color: #3d2401;
+    bottom: 0;
+    width: 100%;
+    height: 250px;
 }
 
-#book3{
+#flower{
+    background-image: url(sunflower.png);
+    background-repeat: no-repeat;
+    width: 500px;
+    height: 4500px;
     position: absolute;
-    width : 40px;
-    height: 200px;
-    margin-left: 80px;
-    background-color: yellowgreen;
+    bottom: -3680;
+    left: 27vw;
+    animation: go-man-go 2s forwards;
+    animation-play-state: paused; 
 }
 
-#book4{
-    position: absolute;
-    width : 40px;
-    height: 200px;
-    margin-left: 120px;
-    background-color: magenta;
-}
 
-#book5{
-    position: absolute;
-    width : 40px;
-    height: 200px;
-    margin-left: 160px;
-    background-color: orange;
-}
-
-@media only screen and (max-width: 800px){
-    #container {
-        transform: rotate(-90deg);
-
-    }
-}
+#flower:active {
+    cursor: wait;
+    animation: go-man-go 2s forwards;
+    animation-play-state: play; 
+  }
+  
+  @keyframes go-man-go {
+      from {
+          transform: translateY(0px);
+      }
+      to {
+        transform: translateY(-4580px);
+      }
+  }
