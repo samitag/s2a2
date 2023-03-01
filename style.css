@@ -22,10 +22,10 @@ body{
 #flower{
     background-image: url(sunflower.png);
     background-repeat: no-repeat;
-    width: 500px;
-    height: 4500px;
+    width: 550px;
+    height: 4700px;
     position: absolute;
-    bottom: -3680;
+    bottom: -4400px;
     left: 27vw;
     animation: go-man-go 2s forwards;
     animation-play-state: paused; 
