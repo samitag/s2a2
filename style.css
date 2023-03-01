@@ -1,0 +1,53 @@
+#bookshelf {
+    position: absolute;
+    width : 280px;
+    height: 200px;
+    background-color: brown;
+}
+
+#book1{
+    position: absolute;
+    width : 40px;
+    height: 200px;
+    margin-left: 10px;
+    background-color: lightblue;
+}
+
+#book2{
+    position: absolute;
+    width : 40px;
+    height: 200px;
+    margin-left: 40px;
+    background-color: red;
+}
+
+#book3{
+    position: absolute;
+    width : 40px;
+    height: 200px;
+    margin-left: 80px;
+    background-color: yellowgreen;
+}
+
+#book4{
+    position: absolute;
+    width : 40px;
+    height: 200px;
+    margin-left: 120px;
+    background-color: magenta;
+}
+
+#book5{
+    position: absolute;
+    width : 40px;
+    height: 200px;
+    margin-left: 160px;
+    background-color: orange;
+}
+
+@media only screen and (max-width: 800px){
+    #container {
+        transform: rotate(-90deg);
+
+    }
+}
