@@ -23,9 +23,9 @@ body{
 #flower{
     height: 4700px;
     position: absolute;
-    width: 50vw;
+    width: 60vw;
     bottom: -4450px;
-    left: 25vw;
+    left: 20vw;
     animation: go-man-go 2s forwards;
     animation-play-state: paused; 
 }
