@@ -8,7 +8,7 @@ body{
     position: absolute;
     background-color: lightblue;
     width: 100vw;
-    height: 5000px;
+    height: 3000px;
     overflow: hidden;
 }
 
@@ -23,9 +23,9 @@ body{
 #flower{
     height: 4700px;
     position: absolute;
-    width: 60vw;
+    width: 40vw;
     bottom: -4450px;
-    left: 20vw;
+    right: 30vw;
     animation: go-man-go 2s forwards;
     animation-play-state: paused; 
 }
@@ -36,7 +36,7 @@ body{
           transform: translateY(0px);
       }
       to {
-        transform: translateY(-4580px);
+        transform: translateY(-2580px);
       }
 }
 
@@ -100,9 +100,9 @@ img {
     position: absolute;
     transform: rotate(25deg);
     top: 15vh;
-    right: 10vw;
+    right: 30vw;
     opacity: 0;
-    width: 80vw;
+    width: 40vw;
 }
 
 #can:active ~ #drops{
