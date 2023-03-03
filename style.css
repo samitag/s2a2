@@ -25,18 +25,12 @@ body{
     width: 550px;
     height: 4700px;
     position: absolute;
-    bottom: -4400px;
-    left: 27vw;
+    bottom: -4450px;
+    left: 30vw;
     animation: go-man-go 2s forwards;
     animation-play-state: paused; 
 }
 
-
-#flower:active {
-    cursor: wait;
-    animation: go-man-go 2s forwards;
-    animation-play-state: play; 
-  }
   
   @keyframes go-man-go {
       from {
@@ -46,3 +40,58 @@ body{
         transform: translateY(-4580px);
       }
   }
+
+
+#can {
+    position: absolute;
+    right: 30px; 
+    top: 30px;
+    height: auto;
+    width: 20vw;
+
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#can:hover {
+    transform: rotate(-30deg);
+}
+
+#can:active ~ #flower{
+    cursor: wait;
+    animation: go-man-go 2s forwards;
+    animation-play-state: play; 
+}
+
+#worm{
+    position: absolute;
+    right: 15px; 
+    bottom: 15px;
+    height: auto;
+    width: 100px;
+    color: white;
+}
+
+#worm:hover {
+    transform: rotate(30deg);
+}
+
+#arrow {
+    position: absolute;
+    left: 15px; 
+    top: 15px;
+    height: auto;
+    width: 60px;
+    opacity: 0.9;
+}
+#arrow:hover {
+    transform: rotate(-30deg);
+}
+
+#arrow:active ~ #flower{
+    animation: none;
+}
+
