@@ -1,6 +1,7 @@
 body{
     padding-left: 0px;
     margin: auto;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 #container{
@@ -20,35 +21,33 @@ body{
 }
 
 #flower{
-    background-image: url(sunflower.png);
-    background-repeat: no-repeat;
-    width: 550px;
     height: 4700px;
     position: absolute;
+    width: 50vw;
     bottom: -4450px;
-    left: 30vw;
+    left: 25vw;
     animation: go-man-go 2s forwards;
     animation-play-state: paused; 
 }
 
   
-  @keyframes go-man-go {
+@keyframes go-man-go {
       from {
           transform: translateY(0px);
       }
       to {
         transform: translateY(-4580px);
       }
-  }
+}
 
 
 #can {
     position: absolute;
-    right: 30px; 
-    top: 30px;
+    right: 5vw; 
+    top: 5vh;
     height: auto;
     width: 20vw;
-
+    min-width: 100px;
 }
 
 img {
@@ -62,7 +61,7 @@ img {
 
 #can:active ~ #flower{
     cursor: wait;
-    animation: go-man-go 2s forwards;
+    animation: go-man-go 6s forwards;
     animation-play-state: play; 
 }
 
@@ -81,10 +80,11 @@ img {
 
 #arrow {
     position: absolute;
-    left: 15px; 
-    top: 15px;
+    left: 1vw; 
+    top: 1vh;
     height: auto;
-    width: 60px;
+    width: 5vw;
+    min-width: 60px;
     opacity: 0.9;
 }
 #arrow:hover {
@@ -95,3 +95,32 @@ img {
     animation: none;
 }
 
+
+#drops {
+    position: absolute;
+    transform: rotate(25deg);
+    top: 15vh;
+    right: 10vw;
+    opacity: 0;
+    width: 80vw;
+}
+
+#can:active ~ #drops{
+    animation: water 1s;
+    animation-play-state: play; 
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 6;
+}
+
+@keyframes water {
+    0%   {opacity: 0;}
+    90%  {opacity: 1}
+    100% {opacity: 0;}
+}
+
+@media only screen and (max-width: 1000px) {
+    #drops {
+        position: absolute;
+        right: 15vw;
+    }
+}
