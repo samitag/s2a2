@@ -21,17 +21,16 @@ body{
 }
 
 #flower{
-    height: 4700px;
+    min-height: 4700px;
     position: absolute;
     width: 40vw;
     bottom: -4450px;
     right: 30vw;
-    animation: go-man-go 2s forwards;
+    animation: grow 2s forwards;
     animation-play-state: paused; 
 }
-
   
-@keyframes go-man-go {
+@keyframes grow {
       from {
           transform: translateY(0px);
       }
@@ -59,9 +58,9 @@ img {
     transform: rotate(-30deg);
 }
 
-#can:active ~ #flower{
+#can:active ~ #flower, #can:focus ~ #flower{
     cursor: wait;
-    animation: go-man-go 6s forwards;
+    animation: grow 6s forwards;
     animation-play-state: play; 
 }
 
@@ -78,24 +77,6 @@ img {
     transform: rotate(30deg);
 }
 
-#arrow {
-    position: absolute;
-    left: 1vw; 
-    top: 1vh;
-    height: auto;
-    width: 5vw;
-    min-width: 60px;
-    opacity: 0.9;
-}
-#arrow:hover {
-    transform: rotate(-30deg);
-}
-
-#arrow:active ~ #flower{
-    animation: none;
-}
-
-
 #drops {
     position: absolute;
     transform: rotate(25deg);
@@ -105,7 +86,7 @@ img {
     width: 40vw;
 }
 
-#can:active ~ #drops{
+#can:active ~ #drops, #can:focus ~ #drops{
     animation: water 1s;
     animation-play-state: play; 
     animation-timing-function: ease-in-out;
@@ -123,4 +104,21 @@ img {
         position: absolute;
         right: 15vw;
     }
+}
+
+#arrow {
+    position: absolute;
+    left: 1vw; 
+    top: 1vh;
+    height: auto;
+    width: 5vw;
+    min-width: 60px;
+    opacity: 0.9;
+}
+#arrow:hover {
+    transform: rotate(-30deg);
+}
+
+#arrow:active ~ #flower, #arrow:focus ~ #flower{
+    animation: none;
 }
